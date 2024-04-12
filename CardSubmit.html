@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>فروشگاه آنلاین میوه و سبزیجات زودفروت</title>
+    <link href="/Assetes/all.min.css" rel="stylesheet" />
+    <link href="/Assetes/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assetes/Site.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/Images/facicon.png" />
+    <style></style>
+  </head>
+  <body>
+    <alert class="alert alert-danger alert-dismissible fade show" role="alert">
+      <a
+        class="d-flex align-items-center ml-2"
+        data-dismiss="alert"
+        aria-label="Close">
+        <i class="fas">&#xf00d;</i>
+      </a>
+      پیام
+    </alert>
+    <container class="container py-5">
+      <logo>
+        <a href="/">
+          <img
+            src="/Images/Logo.svg"
+            alt="فروشگاه آنلاین میوه و سبزیجات زود فروت" />
+        </a>
+      </logo>
+      <box>
+        <box-header>
+          <h1>تایید سفارش</h1>
+        </box-header>
+        <box-body>
+          <container class="container">
+            <box-item>
+              <item-head>
+                <i class="fas fa-user"></i>
+                <span>اطلاعات کاربری</span>
+              </item-head>
+              <card>
+                <row class="row align-items-center">
+                  <column class="col-6"> نام و نام خانوادگی </column>
+                  <column class="col-6"> طاها یساقی </column>
+                </row>
+                <row class="row">
+                  <column class="col-6"> تلفن همراه </column>
+                  <column class="col-6"> 09335082455 </column>
+                </row>
+              </card>
+            </box-item>
+            <form action="/Card/Submit" method="post">
+              <box-item>
+                <item-head>
+                  <i class="fas fa-map-marker"></i>
+                  <span>آدرس انتخاب شده</span>
+                </item-head>
+                <card>
+                  <row class="row justify-content-end">
+                    <column class="col-12 col-lg-8">
+                      <custom-control class="custom-control custom-radio">
+                        <input
+                          type="radio"
+                          name="addressID"
+                          id="122"
+                          value="122"
+                          class="custom-control-input"
+                          checked="" />
+                        <label class="custom-control-label" for="122"
+                          >مشهد، صیاد شیرازی</label
+                        >
+                      </custom-control>
+                      <custom-control class="custom-control custom-radio">
+                        <input
+                          type="radio"
+                          name="addressID"
+                          id="123"
+                          value="123"
+                          class="custom-control-input" />
+                        <label class="custom-control-label" for="123"
+                          >مشهد، صیاد شیرازی</label
+                        >
+                      </custom-control>
+                    </column>
+                    <column class="col-12 col-lg-4">
+                      <a
+                        class="addAddress"
+                        href="/Account/AddEditAddress?redPath=/Card/Submit">
+                        <i class="fas fa-plus"></i>
+                        <span>افزودن آدرس جدید</span>
+                      </a>
+                    </column>
+                  </row>
+                </card>
+              </box-item>
+              <box-item>
+                <item-head>
+                  <i class="fas fa-credit-card"></i>
+                  <span>نوع پرداخت</span>
+                </item-head>
+                <card>
+                  <row class="row align-items-center justify-content-center">
+                    <custom-control
+                      class="custom-control custom-radio custom-control-inline">
+                      <input
+                        type="radio"
+                        name="paymentType"
+                        id="naghd"
+                        value="false"
+                        class="custom-control-input"
+                        checked="" />
+                      <label class="custom-control-label" for="naghd"
+                        >نقدی</label
+                      >
+                    </custom-control>
+                    <custom-control
+                      class="custom-control custom-radio custom-control-inline">
+                      <input
+                        type="radio"
+                        name="paymentType"
+                        id="online"
+                        value="true"
+                        disabled=""
+                        class="custom-control-input" />
+                      <label class="custom-control-label" for="online"
+                        >آنلاین</label
+                      >
+                    </custom-control>
+                  </row>
+                </card>
+              </box-item>
+              <input type="submit" id="btnSubmit" class="d-none" />
+            </form>
+            <shop-items class="cardItems">
+              <container class="container">
+                <row class="row">
+                  <column class="col-12 p-0">
+                    <item class="inline">
+                      <media class="pr-0">
+                        <img src="/Images/peach.png" />
+                        <content>
+                          <h3>هلو</h3>
+                          <financial>
+                            <quantity pre="فی :"></quantity>
+                            <price>70,000</price>
+                          </financial>
+                          <financial>
+                            <quantity pre="جمع :"></quantity>
+                            <price>140,000</price>
+                          </financial>
+                        </content>
+                      </media>
+                      <left class="justify-content-center">
+                        <count>
+                          <span>2</span>
+                          <small>کیلو</small>
+                        </count>
+                      </left>
+                    </item>
+                  </column>
+                  <column class="col-12">
+                    <totalFinancial class="text-center">
+                      <quantity pre="جمع کل :"></quantity>
+                      <price>140,000</price>
+                    </totalFinancial>
+                  </column>
+                </row>
+              </container>
+            </shop-items>
+          </container>
+        </box-body>
+        <box-footer>
+          <action-right>
+            <a href="/Card">
+              <span>ویرایش سبد خرید</span>
+            </a>
+          </action-right>
+          <action-left>
+            <a onclick="$('#btnSubmit').click()">
+              <span>تایید نهایی سفارش</span>
+            </a>
+          </action-left>
+        </box-footer>
+      </box>
+    </container>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/Site.min.js"></script>
+  </body>
+</html>

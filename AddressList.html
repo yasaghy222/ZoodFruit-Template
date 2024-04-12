@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>فروشگاه آنلاین میوه و سبزیجات زودفروت</title>
+    <link href="/Assetes/all.min.css" rel="stylesheet" />
+    <link href="/Assetes/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assetes/Site.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/Images/facicon.png" />
+  </head>
+  <body>
+    <alert class="alert alert-danger alert-dismissible fade show" role="alert">
+      <a
+        class="d-flex align-items-center ml-2"
+        data-dismiss="alert"
+        aria-label="Close">
+        <i class="fas">&#xf00d;</i>
+      </a>
+      پیام
+    </alert>
+    <header>
+      <container class="container">
+        <row class="row">
+          <logo>
+            <a href="/">
+              <img
+                src="/Images/Logo.svg"
+                alt="فروشگاه آنلاین میوه و سبزیجات زود فروت" />
+            </a>
+          </logo>
+          <search>
+            <form id="searchFruit" action="/Home/Search" method="post">
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+              <input
+                type="text"
+                name="fruitTitle"
+                autocomplete="off"
+                value=""
+                placeholder="به عنوان مثال : موز" />
+            </form>
+          </search>
+          <account class="dropdown">
+            <!-- <a href="/Account/Login">
+              <i class="fas fa-user"></i>
+              <span>ورود به حساب کاربری</span>
+            </a> -->
+            <a
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-offset="0,10">
+              <i class="fas fa-user"></i>
+              <span>طاها یساقی</span>
+              <i class="fas fa-chevron-down mr-2"></i>
+            </a>
+            <dropdown class="dropdown-menu">
+              <a href="/Account">
+                <i class="fas fa-user"></i>
+                <span>پروفایل</span>
+              </a>
+              <a href="/Account/OrderList">
+                <i class="fas fa-shopping-bag"></i>
+                <span>سفارش های من</span>
+              </a>
+              <a class="dropdown-divider"></a>
+              <a href="/Account/Logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>خروج</span>
+              </a>
+            </dropdown>
+          </account>
+        </row>
+      </container>
+    </header>
+    <main>
+      <container class="container">
+        <row class="row justify-content-between align-items-start">
+          <userPanel class="col-12 col-lg-3 offset-1">
+            <panel-header>
+              <action>
+                <a href="/Logout">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span>خروج</span>
+                </a>
+              </action>
+              <title>طاها یساقی</title>
+            </panel-header>
+            <panel-body>
+              <ul>
+                <li>
+                  <a href="/Account">
+                    <i class="fas fa-user"></i>
+                    <span>اطلاعات کاربری</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/Account/OrderList">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>سفارش‌ های من</span>
+                  </a>
+                </li>
+                <li class="active">
+                  <a>
+                    <i class="fas fa-map-marker"></i>
+                    <span>آدرس های من</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/Account/ChangePass">
+                    <i class="fas fa-lock"></i>
+                    <span>تغییر رمز عبور</span>
+                  </a>
+                </li>
+              </ul>
+            </panel-body>
+          </userPanel>
+          <box class="col-12 col-lg-8 mt-0">
+            <box-body>
+              <container class="container">
+                <list class="addressList">
+                  <list-head>
+                    <row>
+                      <column>ردیف</column>
+                      <column>شهر</column>
+                      <column>تلفن همراه</column>
+                      <column>آدرس</column>
+                      <column>عملیات</column>
+                    </row>
+                  </list-head>
+                  <list-body>
+                    <row>
+                      <column class="d-lg-none">ردیف</column>
+                      <column>1</column>
+                      <column class="d-lg-none">شهر</column>
+                      <column class="text-success">مشهد</column>
+                      <column class="d-lg-none">تلفن همراه</column>
+                      <column>09335082455</column>
+                      <column class="d-lg-none">آدرس</column>
+                      <column>
+                        <p class="text-muted p-2">صیاد شیرازی ....</p>
+                      </column>
+                      <column class="d-lg-none">عملیات</column>
+                      <column>
+                        <a class="delete" href="">
+                          <i class="fas fa-trash"></i>
+                        </a>
+                        <a class="edit" href="">
+                          <i class="fas fa-pen"></i>
+                        </a>
+                      </column>
+                    </row>
+                  </list-body>
+                </list>
+                <empty>
+                  <container class="container text-center py-2">
+                    <img
+                      src="/Images/empty.svg"
+                      width="128"
+                      class="mb-4 d-block mx-auto" />
+                    <span class="d-block">لیست آدرس های شما خالی است!</span>
+                  </container>
+                </empty>
+              </container>
+            </box-body>
+            <box-footer>
+              <action-right>
+                <a href="/">
+                  <span>بازگشت</span>
+                </a>
+              </action-right>
+              <action-left>
+                <a href="/Account/AddEditAddress">
+                  <span>افزودن آدرس جدید</span>
+                </a>
+              </action-left>
+            </box-footer>
+          </box>
+        </row>
+      </container>
+    </main>
+    <basket>
+      <a href="/Card" fruitCount="2">
+        <i class="fas fa-shopping-bag"></i>
+      </a>
+    </basket>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/Site.min.js"></script>
+  </body>
+</html>

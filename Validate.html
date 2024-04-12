@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>فروشگاه آنلاین میوه و سبزیجات زودفروت</title>
+    <link href="/Assetes/all.min.css" rel="stylesheet" />
+    <link href="/Assetes/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assetes/Site.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/Images/facicon.png" />
+    <style type="text/css">
+      box {
+        min-height: auto;
+      }
+
+      box form {
+        margin: 2rem 0 4rem;
+      }
+
+      box form row {
+        justify-content: center;
+      }
+
+      box form row input[type="number"] {
+        text-align: left;
+        direction: ltr;
+      }
+    </style>
+  </head>
+  <body>
+    <alert class="alert alert-danger alert-dismissible fade show" role="alert">
+      <a
+        class="d-flex align-items-center ml-2"
+        data-dismiss="alert"
+        aria-label="Close">
+        <i class="fas">&#xf00d;</i>
+      </a>
+      پیام
+    </alert>
+    <container class="container py-5">
+      <logo>
+        <a href="/">
+          <img
+            src="/Images/Logo.svg"
+            alt="فروشگاه آنلاین میوه و سبزیجات زود فروت" />
+        </a>
+      </logo>
+      <box>
+        <box-header>
+          <h1>تایید کد</h1>
+        </box-header>
+        <box-body>
+          <container class="container">
+            <form>
+              <row class="row">
+                <group class="form-group col-8">
+                  <label for="ValidateCode">کد تایید</label>
+                  <input
+                    type="number"
+                    id="ValidateCode"
+                    name="ValidateCode"
+                    autocomplete="off"
+                    class="form-control" />
+                </group>
+              </row>
+            </form>
+          </container>
+        </box-body>
+        <box-footer>
+          <action-right>
+            <a>
+              <span>بازگشت</span>
+            </a>
+          </action-right>
+          <action-left>
+            <a>
+              <span>تایید</span>
+            </a>
+          </action-left>
+        </box-footer>
+      </box>
+      <customLink>
+        <label>کد را دریافت نکرده اید؟</label>
+        <a>ارسال دوباره</a>
+      </customLink>
+    </container>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/Site.min.js"></script>
+    <script src="/Scripts/validate.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>فروشگاه آنلاین میوه و سبزیجات زودفروت</title>
+    <link href="/Assetes/all.min.css" rel="stylesheet" />
+    <link href="/Assetes/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assetes/Site.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/Images/facicon.png" />
+    <style type="text/css">
+      box {
+        min-height: auto;
+      }
+
+      box form {
+        margin: 2rem 0 4rem;
+      }
+
+      box form row {
+        justify-content: center;
+      }
+
+      box form row input[type="number"] {
+        text-align: left;
+        direction: ltr;
+      }
+    </style>
+  </head>
+  <body>
+    <alert class="alert alert-danger alert-dismissible fade show" role="alert">
+      <a
+        class="d-flex align-items-center ml-2"
+        data-dismiss="alert"
+        aria-label="Close">
+        <i class="fas">&#xf00d;</i>
+      </a>
+      پیام
+    </alert>
+    <container class="container py-5">
+      <logo>
+        <a href="/">
+          <img
+            src="/Images/Logo.svg"
+            alt="فروشگاه آنلاین میوه و سبزیجات زود فروت" />
+        </a>
+      </logo>
+      <box>
+        <box-header>
+          <h1>ثبت نام در زودفروت</h1>
+        </box-header>
+        <box-body>
+          <container class="container">
+            <form action="/Account/Register" method="post">
+              <row class="row">
+                <group class="form-group col-12 col-lg-8">
+                  <label for="Name" class="inClass">نام</label>
+                  <input
+                    type="text"
+                    name="Name"
+                    class="form-control"
+                    autocomplete="off" />
+                  <label for="Name" class="invalid-feedback"></label>
+                </group>
+
+                <group class="form-group col-12 col-lg-8">
+                  <label for="Family" class="inClass">نام خانوادگی</label>
+                  <input
+                    type="text"
+                    name="Family"
+                    class="form-control"
+                    autocomplete="off" />
+                  <label for="Family" class="invalid-feedback"></label>
+                </group>
+                <group class="form-group col-12 col-lg-8">
+                  <label for="Phone" class="inClass">شماره همراه</label>
+                  <input
+                    type="number"
+                    name="Phone"
+                    class="form-control"
+                    autocomplete="off" />
+                  <label for="Phone" class="invalid-feedback"></label>
+                </group>
+                <group class="form-group col-12 col-lg-8">
+                  <label for="Pass" class="inClass">کلمه عبور</label>
+                  <input
+                    type="password"
+                    name="Pass"
+                    class="form-control"
+                    autocomplete="off" />
+                  <label for="Pass" class="invalid-feedback"></label>
+                </group>
+                <group class="form-group col-12 col-lg-8">
+                  <label for="Pass" class="inClass">تکرار کلمه عبور</label>
+                  <input
+                    type="password"
+                    name="ConfirmPass"
+                    class="form-control"
+                    autocomplete="off" />
+                  <label for="ConfirmPass" class="invalid-feedback"></label>
+                </group>
+                <button id="btnSubmit" type="submit" class="d-none"></button>
+              </row>
+            </form>
+          </container>
+        </box-body>
+        <box-footer>
+          <action-right>
+            <a href="/">
+              <span>بازگشت</span>
+            </a>
+          </action-right>
+          <action-left>
+            <a onclick="$('#btnSubmit').click()">
+              <span>ثبت نام در زودفروت</span>
+            </a>
+          </action-left>
+        </box-footer>
+      </box>
+      <customLink>
+        <label>قبلا ثبت نام کرده اید؟</label>
+        <a href="/Account/Login">وارد شوید</a>
+      </customLink>
+    </container>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/Site.min.js"></script>
+    <script src="/Scripts/validate.min.js"></script>
+  </body>
+</html>

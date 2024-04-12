@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>فروشگاه آنلاین میوه و سبزیجات زودفروت</title>
+    <link href="/Assetes/all.min.css" rel="stylesheet" />
+    <link href="/Assetes/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assetes/Site.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/Images/facicon.png" />
+    <style></style>
+  </head>
+  <body>
+    <alert class="alert alert-danger alert-dismissible fade show" role="alert">
+      <a
+        class="d-flex align-items-center ml-2"
+        data-dismiss="alert"
+        aria-label="Close">
+        <i class="fas">&#xf00d;</i>
+      </a>
+      پیام
+    </alert>
+    <container class="container py-5">
+      <logo>
+        <a href="/">
+          <img
+            src="/Images/Logo.svg"
+            alt="فروشگاه آنلاین میوه و سبزیجات زود فروت" />
+        </a>
+      </logo>
+      <box>
+        <box-header>
+          <h1>جزئیات سفارش</h1>
+        </box-header>
+        <box-body>
+          <container class="container">
+            <status class="mb-5 mt-2">
+              <container class="container text-center">
+                <img
+                  src="/Images/confirmed.svg"
+                  width="128"
+                  class="mb-4 d-block mx-auto" />
+                <span class="d-block">سفارش شما تایید شده است</span>
+                <img
+                  src="/Images/Packageing.svg"
+                  width="128"
+                  class="mb-4 d-block mx-auto" />
+                <span class="d-block">در حال آماده سازی سفارش</span>
+                <img
+                  src="/Images/delivery.svg"
+                  width="128"
+                  class="mb-4 d-block mx-auto" />
+                <span class="d-block">سفارش شما تحویل پیک شد</span>
+                <img
+                  src="/Images/delivered.svg"
+                  width="128"
+                  class="mb-4 d-block mx-auto" />
+                <span class="d-block">سفارش به شما تحویل داده شد</span>
+              </container>
+            </status>
+            <box-item>
+              <card class="w-100">
+                <row class="row align-items-center">
+                  <column class="col-6"> شناسه سفارش </column>
+                  <column class="col-6 text-success"> 7692342 </column>
+                </row>
+                <row class="row align-items-center">
+                  <column class="col-6"> نحوه پرداخت </column>
+                  <column class="col-6"> نقدی </column>
+                </row>
+                <row class="row align-items-center">
+                  <column class="col-6"> تاریخ ثبت سفارش </column>
+                  <column class="col-6"> 1403/01/22 </column>
+                </row>
+                <row class="row align-items-center">
+                  <column class="col-1"> آدرس </column>
+                  <column class="col-11 text-right"> مشهد، صیاد شیرازی </column>
+                </row>
+              </card>
+            </box-item>
+            <shop-items class="cardItems">
+              <container class="container">
+                <row class="row">
+                  <column class="col-12 p-0">
+                    <item class="inline">
+                      <media class="pr-0">
+                        <img src="/Images/peach.png" />
+                        <content>
+                          <h3>هلو</h3>
+                          <financial>
+                            <quantity pre="فی :"></quantity>
+                            <price>70,000</price>
+                          </financial>
+                          <financial>
+                            <quantity pre="جمع :">140,000</quantity>
+                            <price></price>
+                          </financial>
+                        </content>
+                      </media>
+                      <left class="justify-content-center">
+                        <count>
+                          <span>2</span>
+                          <small>کیلو</small>
+                        </count>
+                      </left>
+                    </item>
+                  </column>
+                  <column class="col-12">
+                    <totalFinancial class="text-left">
+                      <quantity pre="جمع کل :"></quantity>
+                      <price>140,000</price>
+                    </totalFinancial>
+                  </column>
+                </row>
+              </container>
+            </shop-items>
+          </container>
+        </box-body>
+        <box-footer>
+          <action-right>
+            <a href="/Account/OrderList">
+              <span>بازگشت</span>
+            </a>
+          </action-right>
+          <action-left>
+            <a href="/Account/OrderList">
+              <span>سفارش مجدد</span>
+            </a>
+          </action-left>
+        </box-footer>
+      </box>
+    </container>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/Site.min.js"></script>
+  </body>
+</html>

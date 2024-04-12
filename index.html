@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>فروشگاه آنلاین میوه و سبزیجات زودفروت</title>
+    <link href="/Assetes/all.min.css" rel="stylesheet" />
+    <link href="/Assetes/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assetes/Site.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/Images/facicon.png" />
+  </head>
+  <body>
+    <alert class="alert alert-danger alert-dismissible fade show" role="alert">
+      <a
+        class="d-flex align-items-center ml-2"
+        data-dismiss="alert"
+        aria-label="Close">
+        <i class="fas">&#xf00d;</i>
+      </a>
+      پیام
+    </alert>
+    <header>
+      <container class="container">
+        <row class="row">
+          <logo>
+            <a href="/">
+              <img
+                src="/Images/Logo.svg"
+                alt="فروشگاه آنلاین میوه و سبزیجات زود فروت" />
+            </a>
+          </logo>
+          <search>
+            <form id="searchFruit" action="/Home/Search" method="post">
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+              <input
+                type="text"
+                name="fruitTitle"
+                autocomplete="off"
+                value=""
+                placeholder="به عنوان مثال : موز" />
+            </form>
+          </search>
+          <account class="dropdown">
+            <!-- <a href="/Account/Login">
+              <i class="fas fa-user"></i>
+              <span>ورود به حساب کاربری</span>
+            </a> -->
+            <a
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-offset="0,10">
+              <i class="fas fa-user"></i>
+              <span>طاها یساقی</span>
+              <i class="fas fa-chevron-down mr-2"></i>
+            </a>
+            <dropdown class="dropdown-menu">
+              <a href="/Account">
+                <i class="fas fa-user"></i>
+                <span>پروفایل</span>
+              </a>
+              <a href="/Account/OrderList">
+                <i class="fas fa-shopping-bag"></i>
+                <span>سفارش های من</span>
+              </a>
+              <a class="dropdown-divider"></a>
+              <a href="/Account/Logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>خروج</span>
+              </a>
+            </dropdown>
+          </account>
+        </row>
+      </container>
+    </header>
+    <main>
+      <container class="container py-3">
+        <row class="row">
+          <category>
+            <ul>
+              <li>
+                <a href="" class="active">میوه</a>
+              </li>
+              <li><a href="">سبزیجات</a></li>
+            </ul>
+          </category>
+
+          <shop-items>
+            <row class="row">
+              <column class="col-12 col-xl-3 col-lg-4">
+                <item>
+                  <media>
+                    <img src="/Images/peach.png" alt="@fruit.Title" />
+                    <content>
+                      <h3>هلو</h3>
+                      <financial>
+                        <quantity pre="هر">کیلو</quantity>
+                        <price>۷۰،۰۰۰</price>
+                      </financial>
+                    </content>
+                  </media>
+                  <bot>
+                    <survey>
+                      <like>
+                        <i class="fas fa-hand-point-up"></i>
+                        <count>10</count>
+                      </like>
+                      <dislike>
+                        <i class="fas fa-hand-point-down"></i>
+                        <count>2</count>
+                      </dislike>
+                    </survey>
+                    <action>
+                      <a href="/Card">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>افزودن به سبد خرید</span>
+                      </a>
+                    </action>
+                  </bot>
+                </item>
+              </column>
+            </row>
+          </shop-items>
+        </row>
+      </container>
+    </main>
+    <basket>
+      <a href="/Card" fruitCount="2">
+        <i class="fas fa-shopping-bag"></i>
+      </a>
+    </basket>
+
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/Site.min.js"></script>
+  </body>
+</html>

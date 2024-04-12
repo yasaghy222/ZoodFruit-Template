@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>فروشگاه آنلاین میوه و سبزیجات زودفروت</title>
+    <link href="/Assetes/all.min.css" rel="stylesheet" />
+    <link href="/Assetes/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Assetes/Site.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/Images/facicon.png" />
+    <style type="text/css">
+      box {
+        min-height: auto;
+      }
+
+      box form {
+        margin: 2rem 0 4rem;
+      }
+
+      box form row {
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <alert class="alert alert-danger alert-dismissible fade show" role="alert">
+      <a
+        class="d-flex align-items-center ml-2"
+        data-dismiss="alert"
+        aria-label="Close">
+        <i class="fas">&#xf00d;</i>
+      </a>
+      پیام
+    </alert>
+    <container class="container py-5">
+      <logo>
+        <a href="/">
+          <img
+            src="/Images/Logo.svg"
+            alt="فروشگاه آنلاین میوه و سبزیجات زود فروت" />
+        </a>
+      </logo>
+      <box>
+        <box-header>
+          <h1>تغییر رمز عبور</h1>
+        </box-header>
+        <box-body>
+          <container class="container">
+            <form action="/Account/ChangePass" method="post">
+              <row class="row">
+                <group class="form-group col-8">
+                  <label for="Pass">رمز عبور فعلی</label>
+                  <input
+                    name="Pass"
+                    type="password"
+                    class="form-control"
+                    autocomplete="off"
+                    required />
+                  <label for="Pass" class="invalid-feedback"></label>
+                  <label for="Pass" class="invalid-feedback"></label>
+                </group>
+                <group class="form-group col-8">
+                  <label for="NewPass">رمز عبور جدید</label>
+                  <input
+                    name="NewPass"
+                    type="password"
+                    class="form-control"
+                    autocomplete="off"
+                    required />
+                  <label for="NewPass" class="invalid-feedback"></label>
+                </group>
+                <group class="form-group col-8">
+                  <label for="ConfirmNewPass">تکرار رمز عبور جدید</label>
+                  <input
+                    name="ConfirmNewPass"
+                    type="password"
+                    class="form-control"
+                    autocomplete="off"
+                    required />
+                  <label for="ConfirmNewPass" class="invalid-feedback"></label>
+                </group>
+                <button type="submit" id="btnSubmit" class="d-none"></button>
+              </row>
+            </form>
+          </container>
+        </box-body>
+        <box-footer>
+          <action-right>
+            <a href="/">
+              <span>بازگشت</span>
+            </a>
+          </action-right>
+          <action-left>
+            <a onclick="$('#btnSubmit').click()">
+              <span>تغییر رمز عبور</span>
+            </a>
+          </action-left>
+        </box-footer>
+      </box>
+    </container>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/Site.min.js"></script>
+    <script src="/Scripts/validate.min.js"></script>
+  </body>
+</html>
